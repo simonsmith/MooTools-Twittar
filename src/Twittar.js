@@ -31,10 +31,12 @@
 			this.request = new Request.JSONP({
 				url : this.url,
 				method : 'get',
+				timeout : 5000,
 				onRequest : function() {
-					
-					this.fireEvent('request');
-					
+					this.fireEvent('request', [ this.element ]);
+				}.bind( this ),
+				onTimeout : function() {
+					this.fireEvent('timeout', [ this.element ]);
 				}.bind( this ),
 				onComplete : this.buildTweets.bind( this )
 			});
