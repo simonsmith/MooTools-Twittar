@@ -6,6 +6,7 @@ description: Twittar Class. Request a users' recent tweets and displays them
 
 author:
 - Simon Smith - http://blink-design.net
+                https://github.com/simonsmith/MooTools-Twittar
 
 requires:
 - core/1.4.1:*
